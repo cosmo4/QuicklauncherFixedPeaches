@@ -14,18 +14,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
+
         Button addBtn = (Button) findViewById(R.id.addBtn);
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText firstNumEditText = (EditText) findViewById(R.id.firstNumEditText);
-                EditText secondNumEditText = (EditText) findViewById(R.id.secondNumEditText);
-                TextView resultTextView = (TextView) findViewById(R.id.resultTextView);
-
-                double num1 = Double.parseDouble(firstNumEditText.getText().toString());
-                double num2 = Double.parseDouble(secondNumEditText.getText().toString());
-                double result = num1 + num2;
-                resultTextView.setText(result + "");
+                setAdd();
 
             }
         });
@@ -34,14 +30,8 @@ public class MainActivity extends AppCompatActivity {
         subBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText firstNumEditText = (EditText) findViewById(R.id.firstNumEditText);
-                EditText secondNumEditText = (EditText) findViewById(R.id.secondNumEditText);
-                TextView resultTextView = (TextView) findViewById(R.id.resultTextView);
+                setsub();
 
-                double num1 = Double.parseDouble(firstNumEditText.getText().toString());
-                double num2 = Double.parseDouble(secondNumEditText.getText().toString());
-                double result = num1 - num2;
-                resultTextView.setText(result + "");
             }
         });
 
@@ -50,14 +40,7 @@ public class MainActivity extends AppCompatActivity {
         multBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText firstNumEditText = (EditText) findViewById(R.id.firstNumEditText);
-                EditText secondNumEditText = (EditText) findViewById(R.id.secondNumEditText);
-                TextView resultTextView = (TextView) findViewById(R.id.resultTextView);
-
-                double num1 = Double.parseDouble(firstNumEditText.getText().toString());
-                double num2 = Double.parseDouble(secondNumEditText.getText().toString());
-                double result = num1 * num2;
-                resultTextView.setText(result + "");
+                setMult();
             }
         });
 
@@ -66,15 +49,69 @@ public class MainActivity extends AppCompatActivity {
         divBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText firstNumEditText = (EditText) findViewById(R.id.firstNumEditText);
-                EditText secondNumEditText = (EditText) findViewById(R.id.secondNumEditText);
-                TextView resultTextView = (TextView) findViewById(R.id.resultTextView);
-
-                double num1 = Double.parseDouble(firstNumEditText.getText().toString());
-                double num2 = Double.parseDouble(secondNumEditText.getText().toString());
-                double result = num1 / num2;
-                resultTextView.setText(result + "");
+                setDiv();
             }
         });
+
+        Button power = (Button) findViewById(R.id.power);
+        power.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setNums();
+            }
+        });
+
+        Button secPower = (Button) findViewById(R.id.secPower);
+        secPower.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setNums();
+            }
+        });
+
     }
+    private double getNumOne(EditText num1) {
+
+        return Double.parseDouble(num1.getText().toString());
+
+    }
+    private double getNumTwo(EditText num2) {
+
+        return Double.parseDouble(num2.getText().toString());
+
+    }
+    private void setNums() {
+        EditText num1 = (EditText) findViewById(R.id.firstNumEditText);
+        EditText num2 = (EditText) findViewById(R.id.secondNumEditText);
+        TextView res = (TextView) findViewById(R.id.resultTextView);
+        res.setText(Math.pow(getNumOne(num1), getNumTwo(num2)) + "");
+    }
+    private void setsub() {
+        EditText num1 = (EditText) findViewById(R.id.firstNumEditText);
+        EditText num2 = (EditText) findViewById(R.id.secondNumEditText);
+        TextView res = (TextView) findViewById(R.id.resultTextView);
+        res.setText((getNumOne(num1) - getNumTwo(num2)) + "");
+
+    }
+    private void setAdd() {
+        EditText num1 = (EditText) findViewById(R.id.firstNumEditText);
+        EditText num2 = (EditText) findViewById(R.id.secondNumEditText);
+        TextView res = (TextView) findViewById(R.id.resultTextView);
+        res.setText(getNumOne(num1) + getNumTwo(num2) + "");
+    }
+    private void setMult() {
+        EditText num1 = (EditText) findViewById(R.id.firstNumEditText);
+        EditText num2 = (EditText) findViewById(R.id.secondNumEditText);
+        TextView res = (TextView) findViewById(R.id.resultTextView);
+        res.setText((getNumOne(num1) * getNumTwo(num2)) + "");
+    }
+    private void setDiv() {
+        EditText num1 = (EditText) findViewById(R.id.firstNumEditText);
+        EditText num2 = (EditText) findViewById(R.id.secondNumEditText);
+        TextView res = (TextView) findViewById(R.id.resultTextView);
+        res.setText(getNumOne(num1) / getNumTwo(num2) + "");
+    }
+
+
+
 }
