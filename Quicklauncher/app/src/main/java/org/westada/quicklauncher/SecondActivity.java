@@ -1,4 +1,4 @@
-package org.westada.lwarn4737;
+package org.westada.quicklauncher;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,13 +7,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class SecondActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.activity_second);
 
         Button addBtn = (Button) findViewById(R.id.addBtn);
         addBtn.setOnClickListener(new View.OnClickListener() {
@@ -23,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
         Button subBtn = (Button) findViewById(R.id.subBtn);
         subBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
         Button multBtn = (Button) findViewById(R.id.multBtn);
         multBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
                 setMult();
             }
         });
+
+
         Button divBtn = (Button) findViewById(R.id.divBtn);
         divBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 setDiv();
             }
         });
+
         Button power = (Button) findViewById(R.id.power);
         power.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 setNums();
             }
         });
+
         Button secPower = (Button) findViewById(R.id.secPower);
         secPower.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 setNums();
             }
         });
+
     }
     private double getNumOne(EditText num1) {
 
@@ -104,4 +111,5 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-}
+    }
+
