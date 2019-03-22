@@ -47,5 +47,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(slopeIntent);
             }
         });
+
+        Button quadBtn = (Button)findViewById(R.id.quadBtn);
+        quadBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent quadIntent = new Intent(getApplicationContext(), QuadraticActivity.class);
+                startActivity(quadIntent);
+            }
+        });
     }
 }
