@@ -18,7 +18,7 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
 
         Intent in = getIntent();
-        int index = in.getIntExtra("org.westada.listapp", -1);
+        int index = in.getIntExtra("org.westada.ITEM_INDEX", -1);
 
         if (index > -1) {
             int pic = getImg(index);

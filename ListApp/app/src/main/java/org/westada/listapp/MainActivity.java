@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
             View v = mInflater.inflate(R.layout.my_listview_detail, null);
             TextView nameTextView = (TextView) v.findViewById(R.id.nameTextView);
-            TextView descriptionTextView = (TextView) v.findViewById(R.id.decriptionTextView);
+            TextView descriptionTextView = (TextView) v.findViewById(R.id.descriptionTextView);
             TextView priceTextView = (TextView) v.findViewById(R.id.priceTextView);
 
             String name = items[i];
