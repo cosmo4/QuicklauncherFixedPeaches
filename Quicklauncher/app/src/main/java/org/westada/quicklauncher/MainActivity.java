@@ -56,5 +56,25 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(quadIntent);
             }
         });
+
+        Button peachVarBtn = (Button)findViewById(R.id.peachVarBtn);
+        peachVarBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent peachVarIntent = new Intent (getApplicationContext(), PeachVarMain.class);
+                startActivity(peachVarIntent);
+
+            }
+        });
+
+        Button peachBtn = (Button)findViewById(R.id.peachBtn);
+        peachBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent peachIntent = new Intent (getApplicationContext(), PeachMain.class);
+                startActivity(peachIntent);
+
+            }
+        });
     }
 }

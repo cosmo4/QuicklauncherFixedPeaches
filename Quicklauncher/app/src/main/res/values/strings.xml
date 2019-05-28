@@ -1,3 +1,41 @@
 <resources>
     <string name="app_name">Quicklauncher</string>
+
+    <string-array name="items1">
+        <item>Orange</item>
+        <item>Potato</item>
+        <item>Corn</item>
+    </string-array>
+
+    <string-array name="prices1">
+        <item>$2.99</item>
+        <item>$60.49</item>
+        <item>$0.02</item>
+    </string-array>
+
+    <string-array name="descriptions1">
+        <item>Fresh oranges from California</item>
+        <item>Fresh french fry potatoes from Idaho</item>
+        <item>Fresh corn on the cob from Nebraska</item>
+    </string-array>
+
+    <string-array name="items">
+        <item>Peach</item>
+        <item>Tomato</item>
+        <item>Squash</item>
+    </string-array>
+
+    <string-array name="prices">
+        <item>$2.99</item>
+        <item>$6.99</item>
+        <item>$3.99</item>
+    </string-array>
+
+    <string-array name="descriptions">
+        <item>Fresh Peaches from California</item>
+        <item>Fresh Tomatoes from Texas</item>
+        <item>Fresh Squash from Nebraska</item>
+    </string-array>
+
+
 </resources>
